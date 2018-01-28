@@ -3,7 +3,9 @@
 
 body {
     padding-top: 80px; 
+    background-image: url('\assets\black_metal_background.jpg')
  }
+
  .starter-template {
      padding: 3rem 1.5rem;
      text-align: center;
