@@ -22,6 +22,16 @@
             Help
           </a>
         </li>
+        <li *ngIf="!user" class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">
+            Login
+          </a>
+        </li>
+        <li *ngIf="user" class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">
+              Logout
+            </a>
+          </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input type="image" src="../../assets/sits_large_noborder.png" />

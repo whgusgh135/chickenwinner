@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { TournamentsComponent } from './tournaments/tournaments.component';
 import { HelpComponent } from './help/help.component';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { HelpComponent } from './help/help.component';
     HomeComponent,
     TournamentsComponent,
     HelpComponent,
+    LoginComponent,
     
   ],
   imports: [
@@ -34,7 +37,9 @@ import { HelpComponent } from './help/help.component';
     NgbModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
