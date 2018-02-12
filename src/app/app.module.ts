@@ -21,6 +21,7 @@ import { UserService } from './user.service';
 import { AdminAuthGuardService } from './admin-auth-guard.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { AdminAuthGuardService } from './admin-auth-guard.service';
     TournamentsComponent,
     HelpComponent,
     LoginComponent,
-    AdminComponent,
+    AdminComponent
+
     
   ],
   imports: [
