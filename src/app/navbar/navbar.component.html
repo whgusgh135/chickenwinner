@@ -22,10 +22,19 @@
             Help
           </a>
         </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+        <li *ngIf="!(afAuth.user$ | async)" class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">
+            Login
+          </a>
+        </li>
+        <li *ngIf="afAuth.user$ | async as user; else anonymousUser" class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">
+              Logout
+            </a>
+          </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input type="image" src="../../assets/sits_large_noborder.png" />
-      </form>
     </div>
   </div>
 </nav>
